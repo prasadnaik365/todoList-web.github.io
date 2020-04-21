@@ -1,0 +1,163 @@
+body {
+  background-color: #f64f59;
+  font-family: "Paprika", cursive;
+}
+/*utility classes*/
+.done {
+  text-decoration: underline;
+}
+/* main styling */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  background-color: #fff;
+  max-width: 400px;
+  margin: 50px auto 10px auto;
+  border-radius: 1rem;
+}
+ul {
+  width: 50%;
+}
+li {
+  list-style: disc;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+}
+
+.btn-delete {
+  background-color: #f64f59;
+  padding: 1px 3px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 2px;
+}
+input[type="text"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.cool-title {
+  animation: move 4s linear infinite;
+  background-image: linear-gradient(
+    to right,
+    #77f,
+    #33d0ff,
+    #25ffbb,
+    #33d0ff,
+    #77f
+  );
+  background-size: 200% auto;
+  font: 700 70px/1 Helvetica;
+  letter-spacing: 1px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.done {
+  text-decoration: line-through;
+}
+.delete {
+  display: none;
+}
+/* footer styling */
+#lab_social_icon_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lab_social_icon_footer a {
+  font-size: 10px;
+  color: #333;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+#lab_social_icon_footer .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/*
+    Multicoloured Hover Variations
+*/
+
+#lab_social_icon_footer #social-fb:hover {
+  color: #3b5998;
+}
+
+#lab_social_icon_footer #social-tw:hover {
+  color: #4099ff;
+}
+
+#lab_social_icon_footer #social-gp:hover {
+  color: #d34836;
+}
+
+#lab_social_icon_footer #social-em:hover {
+  color: #f39c12;
+}
+/* end of styling */
+@keyframes move {
+  to {
+    background-position: 200% center;
+  }
+}
+/* media queries */
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    max-width: 300px;
+  }
+  body {
+    background-color: #2ecc72;
+  }
+}
